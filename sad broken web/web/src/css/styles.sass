@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700')
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500')
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+
+// Components
+@import 'Components/button'
+@import 'Components/header'
+@import 'Components/icon'
+@import 'Components/input'
+@import 'Components/preview'
+@import 'Components/spinner'
+@import 'Components/toast'
+@import 'Components/tooltip'
+
+body
+  margin: 0
+  font-family: 'Work Sans', sans-serif
+
+a
+  &.link
+    color: #0071bc
+    display: inline-block
+    font-size: 20px
+    margin: 8px
+    text-decoration: none
+    outline: none
+    -webkit-tap-highlight-color: transparent
+    &::after
+      content: ''
+      width: 100%
+      height: 2px
+      display: block
+      background: #141b64
+      background: -moz-linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      background: -webkit-linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      background: linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#141b64', endColorstr='#0071bc', GradientType=1)
+      opacity: 0
+      transition: opacity 0.3s, color 0.3s
+    &:focus
+      color: #141b64
+    &:hover::after
+      opacity: 1
+    &:focus::after
+      opacity: 1
+    &.active
+      color: #141b64
+      &::after
+        opacity: 1
+
+.main
+  padding: 0 24px
+
+.heading
+  position: relative
+  .small
+    position: absolute
+    font-family: 'Work Sans', sans-serif
+    text-transform: uppercase
+    font-size: 5vw
+    font-weight: 500
+    color: #141b64
+  .small-nonfix
+    font-family: 'Work Sans', sans-serif
+    text-transform: uppercase
+    font-size: 5vw
+    font-weight: 500
+    color: #141b64
+    -webkit-background-clip: text
+    -webkit-text-fill-color: #141b64
+  .strike
+    font-family: 'Space Mono', monospace
+    margin: 0
+    color: #0071bc
+    background: -webkit-linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    letter-spacing: -3vw
+    font-size: 17vw
+
+@media (min-width: 768px)
+  .main
+    width: 720px
+    margin: 0 auto
+  .heading
+    .small
+      font-size: 38.35px
+    .small-nonfix
+      font-size: 38.35px
+    .strike
+      font-size: 130.5px
+      letter-spacing: -23px

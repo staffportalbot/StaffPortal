@@ -1,0 +1,25 @@
+{
+    "name": "staffportal",
+    "version": "0.0.1",
+    "description": "Connect your staff team!",
+    "main": "index.js",
+    "scripts": {
+        "start-dev": "nodemon .",
+        "start": "node .",
+        "build-dev": "webpack -w",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/staffportalbot/StaffPortal.git"
+    },
+    "author": "oskikiboy, TTtie, GG142",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/staffportalbot/StaffPortal/issues"
+    },
+    "homepage": "https://github.com/staffportalbot/StaffPortal#readme",
+    "dependencies": {
+        "babel-register": "^6.26.0"
+    }
+}

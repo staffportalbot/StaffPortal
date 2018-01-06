@@ -1,0 +1,57 @@
+.text-input
+  position: relative
+  margin-top: 24px
+  height: 28px
+  font-family: 'Space Mono', monospace
+  input
+    background: none
+    outline: none
+    border: none
+    width: 100%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    height: 100%
+    position: absolute
+    font-family: 'Space Mono', monospace
+    font-size: 16px
+    top: -3px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4)
+    &:focus
+      + .underline
+        width: 100%
+        margin: 0
+    + .underline
+      position: absolute
+      bottom: 2px
+      display: block
+      width: 0
+      margin-left: 50%
+      height: 2px
+      background: #141b64
+      background: -moz-linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      background: -webkit-linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      background: linear-gradient(45deg, #141b64 0%, #0071bc 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#141b64', endColorstr='#0071bc', GradientType=1)
+      transition: width .3s cubic-bezier(0.4, 0.0, 0.2, 1), margin .3s cubic-bezier(0.4, 0.0, 0.2, 1)
+  label
+    font-size: 16px
+    font-weight: 300
+    color: rgba(0, 0, 0, .4)
+    left: 0
+    right: 0
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    pointer-events: none
+    display: block
+    transform-origin: 0
+    width: 100%
+    transition: color .3s cubic-bezier(0.4, 0.0, 0.2, 1), transform .3s cubic-bezier(0.4, 0.0, 0.2, 1)
+  .focus
+    transform: translateY(-20px) scale(0.75)
+    color: #141b64
+  .icon
+    position: absolute
+    right: 0

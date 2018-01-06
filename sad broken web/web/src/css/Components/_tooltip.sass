@@ -1,0 +1,41 @@
+.tooltip
+  position: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 2px
+  height: auto
+  min-height: 22px
+  padding: 4px 8px
+  opacity: 0
+  color: #FFFFFF
+  transform-origin: 50% 0
+  transform: translateY(-10px)
+  font-size: 10px
+  font-family: 'Roboto', 'Arial', sans-serif
+  font-weight: 500
+  z-index: 10
+  pointer-events: none
+  //transition: transform 200ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1)
+  overflow: hidden
+  & .background
+    position: absolute
+    pointer-events: none
+    background: #000000
+    border-radius: 256px
+    height: 256px
+    width: 256px
+    left: 50%
+    top: 25%
+    margin-left: -128px
+    margin-top: -128px
+    opacity: 0
+    //transform: scale(0)
+    z-index: -1
+    //transition: transform 800ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 200ms cubic-bezier(0.4, 0.0, 0.2, 1)
+  &.expanded
+    transform: none
+    opacity: 1
+    & .background
+      //transform: scale(1)
+      opacity: 0.9

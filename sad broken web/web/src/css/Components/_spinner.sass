@@ -1,0 +1,115 @@
+@keyframes container-rotate
+  to 
+    transform: rotate(360deg)
+
+@keyframes fill-unfill-rotate
+  12.5%
+    transform: rotate(135deg)
+  25%
+    transform: rotate(270deg)
+  37.5%
+    transform: rotate(405deg)
+  50%
+    transform: rotate(540deg)
+  62.5%
+    transform: rotate(675deg)
+  75%
+    transform: rotate(810deg)
+  87.5%
+    transform: rotate(945deg)
+  to
+    transform: rotate(1080deg)
+
+@keyframes left-spin
+  from
+    transform: rotate(130deg)
+  50%
+    transform: rotate(-5deg)
+  to
+    transform: rotate(130deg)
+
+@keyframes right-spin
+  from
+    transform: rotate(-130deg)
+  50%
+    transform: rotate(5deg)
+  to
+    transform: rotate(-130deg)
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fade-out
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+.spinner
+  display: inline-block
+  position: relative
+  width: 28px
+  height: 28px
+  border-color: #FFFFFF
+  & .circle
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    box-sizing: border-box
+    height: 100%
+    border-width: 3px
+    border-style: solid
+    border-color: inherit
+    border-bottom-color: transparent !important
+    border-radius: 50%
+  & .gap-patch
+    position: absolute
+    box-sizing: border-box
+    top: 0
+    left: 45%
+    width: 10%
+    height: 100%
+    overflow: hidden
+    border-color: inherit
+    & .circle
+      width: 1000%
+      left: -450%
+  & .circle-clipper
+    display: inline-block
+    position: relative
+    width: 50%
+    height: 100%
+    overflow: hidden
+    border-color: inherit
+    &.left .circle
+      border-right-color: transparent !important
+      transform: rotate(129deg)
+      animation: left-spin 1333ms infinite both
+    &.right .circle
+      left: -100%
+      border-left-color: transparent !important
+      transform: rotate(-129deg)
+      animation: right-spin 1333ms infinite both
+    & .circle
+      width: 200%
+  &.cooldown
+    animation: fade-out 400ms both
+
+.spinner-container
+  width: 100%
+  height: 100%
+  border-color: inherit
+  animation: container-rotate 1568ms linear infinite
+
+.spinner-layer
+  position: absolute
+  width: 100%
+  height: 100%
+  opacity: 1
+  border-color: inherit
+  animation: fill-unfill-rotate 5332ms infinite both

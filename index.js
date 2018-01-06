@@ -1,1 +1,2 @@
 // STAFFPORTAL CORE
+require("./server/")
