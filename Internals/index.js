@@ -1,3 +1,3 @@
 module.exports = {
-// Exports here
+    Constants: require("./Constants.js"),
 }
